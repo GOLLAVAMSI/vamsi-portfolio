@@ -1,0 +1,114 @@
+@import url('about_style.css'); /* Use same sidebar and colors */
+
+/* Main layout */
+
+
+.main-content {
+  margin-left: 240px;
+  padding: 4rem 3rem;
+  background: #f9fafb;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+/* Hero Section */
+.hero {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.hero h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2563eb;
+  margin: 1rem 0;
+  height: 40px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1rem auto 2rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0f172a;
+  color: #00ffc8;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00ffc8;
+  color: #0f172a;
+}
+
+/* Typing effect */
+.cursor {
+  display: inline-block;
+  background-color: #2563eb;
+  width: 2px;
+  height: 1.2em;
+  animation: blink 0.7s infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Highlight */
+.highlight {
+  color: #00ffc8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .sidebar-nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+ 
+}

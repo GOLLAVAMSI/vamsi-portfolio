@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Vamsi's Portfolio</title>
+<link rel="stylesheet" href="style.css" /></head>
+<body>
+  <div class="wrapper sidebar-layout">
+    <aside class="sidebar">
+     <div class="logo"> Vamsi's Portfolio
+             <!-- <img src="images/logo.jpg" alt="Vamsi Logo" /> -->
+     </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <section class="hero">
+        <h1>Hello, I'm <span class="highlight">Golla Vamsi</span></h1>
+        <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+        <p>I'm a Cybersecurity student, Web Developer, and an enthusiast of secure and modern technology.</p>
+        <a href="projects.html" class="btn">🚀 View My Projects</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 Golla Vamsi. Crafted with passion.</p>
+  </footer>
+
+  <!-- Typing Animation Script -->
+  <script>
+    const phrases = ["Cybersecurity Enthusiast", "Frontend Developer", "Tech Volunteer", "Problem Solver"];
+    const typedText = document.querySelector(".typed-text");
+    const cursor = document.querySelector(".cursor");
+
+    let index = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeLoop() {
+      if (typing) {
+        if (charIndex < phrases[index].length) {
+          typedText.textContent += phrases[index].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeLoop, 100);
+        } else {
+          typing = false;
+          setTimeout(typeLoop, 1500);
+        }
+      } else {
+        if (charIndex > 0) {
+          typedText.textContent = phrases[index].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(typeLoop, 50);
+        } else {
+          typing = true;
+          index = (index + 1) % phrases.length;
+          setTimeout(typeLoop, 300);
+        }
+      }
+    }
+
+    typeLoop();
+  </script>
+</body>
+</html>

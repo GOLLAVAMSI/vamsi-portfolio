@@ -1,0 +1,348 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Sidebar Layout */
+.sidebar-layout {
+  display:flex;
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+/* Sidebar - desktop & large screens */
+.sidebar {
+  width: 240px;
+  background-color: #0f172a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar .logo {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  color: #00ffc8;
+  font-family: 'Segoe UI Black', sans-serif;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 1.8rem;
+}
+
+.sidebar-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+  background-color: #00ffc8;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Main Content */
+.main-content {
+ margin-left: 400px;
+  padding: 4rem 3rem;
+  background: #f9fafb;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+/* Section Title */
+.about h1 {
+  font-size: 2.8rem;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* Paragraphs */
+.about p {
+  margin: 1.2rem 0;
+  font-size: 1.15rem;
+  color: #444;
+}
+
+/* Subheadings */
+.about h2 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #2563eb;
+  border-bottom: 3px solid #00ffc8;
+  padding-bottom: 0.3rem;
+  font-weight: 800;
+}
+
+/* Skill badges container */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Skill badges */
+.skills-icons span {
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,121,107,0.2);
+  transition: transform 0.3s;
+  cursor: default;
+}
+
+.skills-icons span:hover {
+  transform: scale(1.1);
+  background: #00bfa5;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0,191,165,0.6);
+}
+
+/* Certifications list */
+.cert-list {
+  padding-left: 1.3rem;
+  margin: 1rem 0;
+  list-style: disc;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.cert-list li {
+  margin: 0.8rem 0;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+/* Customize checkmark bullets */
+.cert-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00bfa5;
+  font-weight: bold;
+}
+
+/* Call to Action box */
+.cta-box {
+  background: linear-gradient(90deg, #00ffc8, #00bfa5);
+  padding: 1.8rem 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  border-radius: 15px;
+  color: #0f172a;
+  box-shadow: 0 10px 25px rgba(0,191,165,0.4);
+  font-weight: 700;
+  font-size: 1.25rem;
+  user-select: none;
+  letter-spacing: 0.05em;
+}
+
+/* CTA button */
+.cta-box .btn-primary {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: #0f172a;
+  color: #00ffc8;
+  padding: 0.7rem 1.7rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 900;
+  font-size: 1.15rem;
+  box-shadow: 0 8px 18px rgba(0,255,200,0.5);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.cta-box .btn-primary:hover {
+  background-color: #00bfa5;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,191,165,0.9);
+}
+
+/* Footer */
+footer {
+  margin-left: 240px;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  user-select: none;
+  box-shadow: inset 0 1px 4px rgba(255,255,255,0.1);
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* ========= Responsive Styling ========= */
+
+/* Tablets (768px - 900px) */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    padding: 3rem 2rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  footer {
+    margin-left: 0;
+  }
+  
+  .sidebar-layout {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: none;
+  }
+  
+  .sidebar .logo {
+    font-size: 1.8rem;
+  }
+  
+  .sidebar-nav ul {
+    display: flex;
+    gap: 1.2rem;
+  }
+  
+  .sidebar-nav ul li {
+    margin-bottom: 0;
+  }
+  
+  .sidebar-nav ul li a {
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .sidebar {
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+  }
+
+  .sidebar .logo {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .sidebar-nav ul li a {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .about h2 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+  }
+
+  .skills-icons span {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .cert-list {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+
+  .cta-box {
+    font-size: 1.1rem;
+    padding: 1.3rem 1.5rem;
+  }
+
+  .cta-box .btn-primary {
+    font-size: 1rem;
+    padding: 0.6rem 1.3rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large desktop - widen content */
+@media (min-width: 1200px) {
+  .main-content {
+    max-width: 1100px;
+    padding: 5rem 4rem;
+  }
+
+  .about h1 {
+    font-size: 3.2rem;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .skills-icons span {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
